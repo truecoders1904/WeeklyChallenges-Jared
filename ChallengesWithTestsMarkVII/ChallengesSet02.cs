@@ -55,7 +55,17 @@ namespace ChallengesWithTestsMarkVII
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+
+            foreach (int number in numbers)
+            {
+                if (number%2 == 0)
+                {
+                    sum += number;
+                }
+            }
+
+            return sum;
         }
 
         public bool IsSumOdd(List<int> numbers)
