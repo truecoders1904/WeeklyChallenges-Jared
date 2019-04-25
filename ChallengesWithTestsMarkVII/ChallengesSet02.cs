@@ -37,7 +37,13 @@ namespace ChallengesWithTestsMarkVII
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            foreach (int number in numbers)
+            {
+                sum += number;
+            }
+            return sum;
+            
         }
 
         public int SumEvens(int[] numbers)
