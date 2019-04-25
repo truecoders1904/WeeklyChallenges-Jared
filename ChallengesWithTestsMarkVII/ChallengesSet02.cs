@@ -22,7 +22,7 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsNumberOdd(int num)
         {
-            throw new NotImplementedException();
+            return (num%2 != 0);
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
