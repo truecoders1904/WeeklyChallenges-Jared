@@ -70,7 +70,14 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+
+            foreach (int number in numbers)
+            {
+                sum += number;
+            }
+
+            return (sum % 2 != 0);
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
