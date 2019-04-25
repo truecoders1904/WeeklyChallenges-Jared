@@ -32,7 +32,14 @@ namespace ChallengesWithTestsMarkVII
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            if (str1.Length > str2.Length)
+            {
+                return str1.Length;
+            }
+            else
+            {
+                return str2.Length;
+            }
         }
 
         public int Sum(int[] numbers)
