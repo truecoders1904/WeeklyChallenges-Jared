@@ -82,7 +82,17 @@ namespace ChallengesWithTestsMarkVII
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            int counter = 0;
+
+            for (int i = 0; i < number; i++)
+            {
+                if (i%2 != 0)
+                {
+                    counter += 1;
+                }
+            }
+
+            return counter;
         }
     }
 }
