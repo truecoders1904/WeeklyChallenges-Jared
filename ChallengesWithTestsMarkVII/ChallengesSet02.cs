@@ -27,8 +27,13 @@ namespace ChallengesWithTestsMarkVII
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            double minNumber =  999;
-            double maxNumber = -999;
+            if (numbers == null)
+            {
+                return 0;
+            }
+
+            double minNumber =  double.MaxValue;
+            double maxNumber = double.MinValue;
 
             foreach(double number in numbers)
             {
@@ -63,6 +68,11 @@ namespace ChallengesWithTestsMarkVII
 
         public int Sum(int[] numbers)
         {
+            if (numbers == null)
+            {
+                return 0;
+            }
+
             int sum = 0;
             foreach (int number in numbers)
             {
@@ -74,6 +84,11 @@ namespace ChallengesWithTestsMarkVII
 
         public int SumEvens(int[] numbers)
         {
+            if (numbers == null)
+            {
+                return 0;
+            }
+
             int sum = 0;
 
             foreach (int number in numbers)
@@ -89,6 +104,11 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsSumOdd(List<int> numbers)
         {
+            if (numbers == null)
+            {
+                return false;
+            }
+
             int sum = 0;
 
             foreach (int number in numbers)
