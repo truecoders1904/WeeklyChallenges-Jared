@@ -27,7 +27,26 @@ namespace ChallengesWithTestsMarkVII
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+            double minNumber =  999;
+            double maxNumber = -999;
+
+            foreach(double number in numbers)
+            {
+                if (number > maxNumber)
+                {
+                    maxNumber = number;
+                }
+            }
+
+            foreach (double number in numbers)
+            {
+                if (number < minNumber)
+                {
+                    minNumber = number;
+                }
+            }
+
+            return minNumber + maxNumber;
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
