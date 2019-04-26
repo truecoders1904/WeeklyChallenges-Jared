@@ -39,7 +39,7 @@ namespace ChallengesWithTestsMarkVII
             }
             else
             {
-                return $"Hello, {nameOfPerson}";
+                return $"Hello, {nameOfPerson}!";
             }
         }
 

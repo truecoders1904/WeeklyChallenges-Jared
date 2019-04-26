@@ -51,7 +51,7 @@ namespace ChallengesWithTestsMarkVII
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            if (str1.Length > str2.Length)
+            if (str1.Length < str2.Length)
             {
                 return str1.Length;
             }
