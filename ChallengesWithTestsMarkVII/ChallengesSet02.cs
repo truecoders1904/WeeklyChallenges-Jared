@@ -73,6 +73,7 @@ namespace ChallengesWithTestsMarkVII
                 return 0;
             }
 
+
             int sum = 0;
             foreach (int number in numbers)
             {
