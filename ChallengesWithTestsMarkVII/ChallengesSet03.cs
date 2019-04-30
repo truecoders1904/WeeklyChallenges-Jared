@@ -7,7 +7,15 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+            foreach (bool truthoodStatement in vals)
+            {
+                 if (!truthoodStatement)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
