@@ -20,7 +20,22 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return false;
+            }
+
+            int sum = 0;
+
+            foreach (int number in numbers)
+            {
+                if (number % 2 != 0)
+                {
+                    sum += number;
+                }
+            }
+
+            return (sum % 2 != 0);
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
