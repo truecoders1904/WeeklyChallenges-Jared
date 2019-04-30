@@ -71,7 +71,8 @@ namespace ChallengesWithTestsMarkVII
 
         public char GetLastLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            char[] letters = val.ToCharArray();
+            return letters[letters.Length-1]; ;
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
