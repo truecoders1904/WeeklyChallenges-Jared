@@ -94,7 +94,19 @@ namespace ChallengesWithTestsMarkVII
 
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            int maximum = 100;
+            int[] oddsBelow100 = new int[maximum/2];
+            int counter = 0;
+            for (int i = 0; i < maximum; i++)
+            {
+                if (i%2 != 0)
+                {
+                    oddsBelow100[counter] = i;
+                    counter += 1;
+                }
+            }
+
+            return oddsBelow100;
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
