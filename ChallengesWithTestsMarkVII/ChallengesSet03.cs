@@ -109,9 +109,14 @@ namespace ChallengesWithTestsMarkVII
             return oddsBelow100;
         }
 
-        public void ChangeAllElementsToUppercase(string[] words)
+        public string[] ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].ToUpper();
+            }
+
+            return words;
         }
     }
 }
