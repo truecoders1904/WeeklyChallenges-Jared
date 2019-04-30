@@ -77,7 +77,14 @@ namespace ChallengesWithTestsMarkVII
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            if (divisor == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return dividend/divisor;
+            }
         }
 
         public int LastMinusFirst(int[] nums)
