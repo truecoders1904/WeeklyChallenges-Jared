@@ -40,7 +40,27 @@ namespace ChallengesWithTestsMarkVII
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            bool containsUpper = false;
+            bool containsLower = false;
+            bool containsNumber = false;
+
+            foreach (char c in password)
+            {
+                if (Char.IsUpper(c))
+                {
+                    containsUpper = true;
+                }
+                else if (Char.IsLower(c))
+                {
+                    containsLower = true;
+                }
+                else if (Char.IsNumber(c))
+                {
+                    containsNumber = true;
+                }
+            }
+
+            return (containsUpper && containsLower && containsNumber);
         }
 
         public char GetFirstLetterOfString(string val)
