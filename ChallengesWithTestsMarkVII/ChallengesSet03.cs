@@ -65,7 +65,8 @@ namespace ChallengesWithTestsMarkVII
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            char[] letters = val.ToCharArray();
+            return letters[0];
         }
 
         public char GetLastLetterOfString(string val)
