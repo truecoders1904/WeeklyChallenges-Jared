@@ -1,37 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 namespace ChallengesWithTestsMarkVII
 {
     public class ChallengesSet02
     {
+       
         public bool CharacterIsALetter(char c)
         {
-            return (Char.IsLetter(c));
+            return Char.IsLetter(c);
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            return (vals.Length%2 == 0);
+            return vals.Length%2 == 0;
         }
 
         public bool IsNumberEven(int number)
         {
-            return (number%2 == 0);
+            return number%2 == 0;
         }
 
         public bool IsNumberOdd(int num)
         {
-            return (num%2 != 0);
+            return num%2 != 0;
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            if (numbers == null)
+            if (numbers == null || numbers.Count() == 0)
             {
                 return 0;
             }
-
+            else
+            {
+                return numbers.Min() + numbers.Max();
+            }
+        }/* 
             double minNumber =  double.MaxValue;
             double maxNumber = double.MinValue;
 
@@ -41,10 +46,7 @@ namespace ChallengesWithTestsMarkVII
                 {
                     maxNumber = number;
                 }
-            }
 
-            foreach (double number in numbers)
-            {
                 if (number < minNumber)
                 {
                     minNumber = number;
@@ -52,10 +54,13 @@ namespace ChallengesWithTestsMarkVII
             }
 
             return minNumber + maxNumber;
-        }
+        }*/
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
+            return Math.Min(str1.Length, str2.Length);
+
+            /*
             if (str1.Length < str2.Length)
             {
                 return str1.Length;
@@ -63,7 +68,7 @@ namespace ChallengesWithTestsMarkVII
             else
             {
                 return str2.Length;
-            }
+            }*/
         }
 
         public int Sum(int[] numbers)
@@ -72,15 +77,17 @@ namespace ChallengesWithTestsMarkVII
             {
                 return 0;
             }
-
-
-            int sum = 0;
+            else
+            {
+                return numbers.Sum();
+            }
+            /*
             foreach (int number in numbers)
             {
                 sum += number;
             }
             return sum;
-            
+            */
         }
 
         public int SumEvens(int[] numbers)
@@ -89,7 +96,7 @@ namespace ChallengesWithTestsMarkVII
             {
                 return 0;
             }
-
+            
             int sum = 0;
 
             foreach (int number in numbers)
@@ -109,30 +116,29 @@ namespace ChallengesWithTestsMarkVII
             {
                 return false;
             }
-
-            int sum = 0;
-
+            else
+            {
+                return numbers.Sum()%2 != 0;
+            }
+            /*
             foreach (int number in numbers)
             {   
                 sum += number;
             }
-
-            return (sum % 2 != 0);
+            
+            return (sum % 2 != 0); */
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            int counter = 0;
-
-            for (int i = 0; i < number; i++)
+            if (number < 0)
             {
-                if (i%2 != 0)
-                {
-                    counter += 1;
-                }
+                return 0;
             }
-
-            return counter;
+            else
+            {
+                return number / 2;
+            }
         }
     }
 }

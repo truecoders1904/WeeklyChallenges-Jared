@@ -65,14 +65,14 @@ namespace ChallengesWithTestsMarkVII
 
         public char GetFirstLetterOfString(string val)
         {
-            char[] letters = val.ToCharArray();
-            return letters[0];
+            //char[] letters = val.ToCharArray();
+            return val[0];
         }
 
         public char GetLastLetterOfString(string val)
         {
-            char[] letters = val.ToCharArray();
-            return letters[letters.Length-1]; ;
+            //char[] letters = val.ToCharArray();
+            return val[val.Length-1]; ;
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
@@ -94,9 +94,11 @@ namespace ChallengesWithTestsMarkVII
 
         public int[] GetOddsBelow100()
         {
+
             int maximum = 100;
-            int[] oddsBelow100 = new int[maximum/2];
+            int[] oddsBelowMaximum = new int[maximum/2];
             int counter = 0;
+            /*
             for (int i = 0; i < maximum; i++)
             {
                 if (i%2 != 0)
@@ -105,8 +107,15 @@ namespace ChallengesWithTestsMarkVII
                     counter += 1;
                 }
             }
+            */
 
-            return oddsBelow100;
+            for (int i = 1; i < maximum; i += 2)
+            {
+                oddsBelowMaximum[counter] = i;
+                counter += 1;
+            }
+
+            return oddsBelowMaximum;
         }
 
         public string[] ChangeAllElementsToUppercase(string[] words)
