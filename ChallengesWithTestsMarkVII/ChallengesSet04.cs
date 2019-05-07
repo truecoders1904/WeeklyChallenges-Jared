@@ -66,7 +66,31 @@ namespace ChallengesWithTestsMarkVII
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return 0;
+            }
+
+            double sumOfEvens   = 0;
+            int countOfEvens = 0;
+
+            foreach (int num in numbers)
+            {
+                if (num%2 == 0)
+                {
+                    sumOfEvens += num;
+                    countOfEvens += 1;
+                }
+            }
+
+            if (countOfEvens == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return sumOfEvens / countOfEvens;
+            }
         }
 
         public int Factorial(int number)
