@@ -21,14 +21,13 @@ namespace ChallengesWithTestsMarkVII
                 {
                     sum -= num;
                 }
-
             }
                 return sum;
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
+            return Math.Min(Math.Min(str1.Length, str2.Length),Math.Min(str3.Length, str4.Length));
         }
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
