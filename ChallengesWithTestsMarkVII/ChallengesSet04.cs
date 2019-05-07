@@ -6,7 +6,24 @@ namespace ChallengesWithTestsMarkVII
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+             {
+                return 0;
+             }
+            int sum = 0;
+            foreach (int num in numbers)
+            {
+                if (num%2 == 0)
+                {
+                    sum += num;
+                }
+                else
+                {
+                    sum -= num;
+                }
+
+            }
+                return sum;
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)

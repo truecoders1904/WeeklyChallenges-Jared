@@ -7,7 +7,7 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-<<<<<<< HEAD
+
             foreach (bool truthoodStatement in vals)
             {
                  if (!truthoodStatement)
@@ -17,14 +17,14 @@ namespace ChallengesWithTestsMarkVII
             }
 
             return false;
-=======
+
             throw new NotImplementedException();
->>>>>>> ca3df4e108d94bb802cbedf50327a31785fae67d
+
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-<<<<<<< HEAD
+
             if (numbers == null)
             {
                 return false;
@@ -41,14 +41,14 @@ namespace ChallengesWithTestsMarkVII
             }
 
             return (sum % 2 != 0);
-=======
+
             throw new NotImplementedException();
->>>>>>> ca3df4e108d94bb802cbedf50327a31785fae67d
+
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-<<<<<<< HEAD
+
             bool containsUpper = false;
             bool containsLower = false;
             bool containsNumber = false;
@@ -70,34 +70,32 @@ namespace ChallengesWithTestsMarkVII
             }
 
             return (containsUpper && containsLower && containsNumber);
-=======
+
             throw new NotImplementedException();
->>>>>>> ca3df4e108d94bb802cbedf50327a31785fae67d
+
         }
 
         public char GetFirstLetterOfString(string val)
         {
-<<<<<<< HEAD
-            //char[] letters = val.ToCharArray();
+
             return val[0];
-=======
+
             throw new NotImplementedException();
->>>>>>> ca3df4e108d94bb802cbedf50327a31785fae67d
+
         }
 
         public char GetLastLetterOfString(string val)
         {
-<<<<<<< HEAD
-            //char[] letters = val.ToCharArray();
+
             return val[val.Length-1]; ;
-=======
+
             throw new NotImplementedException();
->>>>>>> ca3df4e108d94bb802cbedf50327a31785fae67d
+
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-<<<<<<< HEAD
+
             if (divisor == 0)
             {
                 return 0;
@@ -106,23 +104,22 @@ namespace ChallengesWithTestsMarkVII
             {
                 return dividend/divisor;
             }
-=======
+
             throw new NotImplementedException();
->>>>>>> ca3df4e108d94bb802cbedf50327a31785fae67d
+
         }
 
         public int LastMinusFirst(int[] nums)
         {
-<<<<<<< HEAD
+
             return nums[nums.Length-1] - nums[0];
-=======
+
             throw new NotImplementedException();
->>>>>>> ca3df4e108d94bb802cbedf50327a31785fae67d
+
         }
 
         public int[] GetOddsBelow100()
         {
-<<<<<<< HEAD
 
             int maximum = 100;
             int[] oddsBelowMaximum = new int[maximum/2];
@@ -155,14 +152,7 @@ namespace ChallengesWithTestsMarkVII
             }
 
             return words;
-=======
-            throw new NotImplementedException();
-        }
 
-        public void ChangeAllElementsToUppercase(string[] words)
-        {
-            throw new NotImplementedException();
->>>>>>> ca3df4e108d94bb802cbedf50327a31785fae67d
         }
     }
 }
