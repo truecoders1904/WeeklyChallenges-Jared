@@ -52,7 +52,16 @@ namespace ChallengesWithTestsMarkVII
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            int nullCounter = 0;
+
+            foreach (var element in objs)
+            {
+                if (element == null)
+                {
+                    nullCounter += 1;
+                }
+            }
+            return (nullCounter > objs.Length / 2);
         }
 
         public double AverageEvens(int[] numbers)
