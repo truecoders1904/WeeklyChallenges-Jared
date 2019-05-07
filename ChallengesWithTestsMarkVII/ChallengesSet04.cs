@@ -95,7 +95,19 @@ namespace ChallengesWithTestsMarkVII
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            int factorial = 1;
+
+            while (number > 0)
+            {
+                factorial *= number;
+                number -= 1;
+            }
+            return factorial;
         }
     }
 }
