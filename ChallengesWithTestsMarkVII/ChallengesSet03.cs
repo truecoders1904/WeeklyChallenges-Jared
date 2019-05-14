@@ -18,8 +18,6 @@ namespace ChallengesWithTestsMarkVII
 
             return false;
 
-            throw new NotImplementedException();
-
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
@@ -41,8 +39,6 @@ namespace ChallengesWithTestsMarkVII
             }
 
             return (sum % 2 != 0);
-
-            throw new NotImplementedException();
 
         }
 
@@ -71,7 +67,6 @@ namespace ChallengesWithTestsMarkVII
 
             return (containsUpper && containsLower && containsNumber);
 
-            throw new NotImplementedException();
 
         }
 
@@ -80,7 +75,6 @@ namespace ChallengesWithTestsMarkVII
 
             return val[0];
 
-            throw new NotImplementedException();
 
         }
 
@@ -89,7 +83,6 @@ namespace ChallengesWithTestsMarkVII
 
             return val[val.Length-1]; ;
 
-            throw new NotImplementedException();
 
         }
 
@@ -105,8 +98,6 @@ namespace ChallengesWithTestsMarkVII
                 return dividend/divisor;
             }
 
-            throw new NotImplementedException();
-
         }
 
         public int LastMinusFirst(int[] nums)
@@ -114,7 +105,6 @@ namespace ChallengesWithTestsMarkVII
 
             return nums[nums.Length-1] - nums[0];
 
-            throw new NotImplementedException();
 
         }
 
@@ -124,16 +114,6 @@ namespace ChallengesWithTestsMarkVII
             int maximum = 100;
             int[] oddsBelowMaximum = new int[maximum/2];
             int counter = 0;
-            /*
-            for (int i = 0; i < maximum; i++)
-            {
-                if (i%2 != 0)
-                {
-                    oddsBelow100[counter] = i;
-                    counter += 1;
-                }
-            }
-            */
 
             for (int i = 1; i < maximum; i += 2)
             {
@@ -144,14 +124,14 @@ namespace ChallengesWithTestsMarkVII
             return oddsBelowMaximum;
         }
 
-        public string[] ChangeAllElementsToUppercase(string[] words)
+        public void ChangeAllElementsToUppercase(string[] words)
         {
             for (int i = 0; i < words.Length; i++)
             {
                 words[i] = words[i].ToUpper();
             }
 
-            return words;
+            //return words;
 
         }
     }

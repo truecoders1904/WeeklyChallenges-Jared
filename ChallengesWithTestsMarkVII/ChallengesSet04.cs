@@ -13,14 +13,8 @@ namespace ChallengesWithTestsMarkVII
             int sum = 0;
             foreach (int num in numbers)
             {
-                if (num%2 == 0)
-                {
-                    sum += num;
-                }
-                else
-                {
-                    sum -= num;
-                }
+                sum = (num % 2 == 0) ? sum + num : sum - num;
+               
             }
                 return sum;
         }
