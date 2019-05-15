@@ -45,7 +45,19 @@ namespace ChallengesWithTestsMarkVII
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+
+            int sum = 0;
+
+            for(int i = 1; i < numbers.Length; i++)
+            {
+                sum += (numbers[i-1] % 2 == 0) ? numbers[i] : 0;
+            }
+            
+            return sum;
         }
 
         public string TurnWordsIntoSentence(string[] words)
