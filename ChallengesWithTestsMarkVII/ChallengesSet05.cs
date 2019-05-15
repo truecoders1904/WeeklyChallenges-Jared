@@ -62,7 +62,19 @@ namespace ChallengesWithTestsMarkVII
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+            if (words == null || words.Length == 0)
+            {
+                return "";
+            }
+
+            string sentence = "";
+
+            foreach (string word in words)
+            {
+                sentence += (!string.IsNullOrWhiteSpace(word)) ? word.Trim() + " " : "";
+            }
+
+            return (sentence.Length > 0) ? sentence.TrimEnd() + "." : "";
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
