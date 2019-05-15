@@ -33,28 +33,27 @@ namespace ChallengesWithTestsMarkVII
 
         public bool IsAscendingOrder(int[] numbers)
         {
-            if (numbers == null || numbers.Length == 0)
+            if (numbers != null && numbers.Length > 0)
             {
-                return false;
+                int[] sortedNumbers = new int[numbers.Length];
+                Array.Copy(numbers, sortedNumbers, numbers.Length);
+                Array.Sort(sortedNumbers);
+                return Enumerable.SequenceEqual(numbers, sortedNumbers);
             }
-            int[] sortedNumbers = new int[numbers.Length];
-            Array.Copy(numbers, sortedNumbers, numbers.Length);
-            Array.Sort(sortedNumbers);
-            return Enumerable.SequenceEqual(numbers, sortedNumbers);
+
+            return false;
         }
 
         public int SumElementsThatFollowAnEven(int[] numbers)
         {
-            if (numbers == null || numbers.Length == 0)
-            {
-                return 0;
-            }
-
             int sum = 0;
 
-            for(int i = 1; i < numbers.Length; i++)
+            if (numbers != null && numbers.Length > 0)
             {
-                sum += (numbers[i-1] % 2 == 0) ? numbers[i] : 0;
+                for (int i = 1; i < numbers.Length; i++)
+                {
+                    sum += (numbers[i - 1] % 2 == 0) ? numbers[i] : 0;
+                }
             }
             
             return sum;
@@ -79,12 +78,41 @@ namespace ChallengesWithTestsMarkVII
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            throw new NotImplementedException();
+           
+           List<double> fourthElements = new List<double>();
+
+           if (elements != null && elements.Count > 0)
+            {
+                for (int i = 3; i < elements.Count; i += 4)
+                {
+                    fourthElements.Add(elements[i]);
+                }
+            }
+
+            return fourthElements.ToArray();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
         {
-            throw new NotImplementedException();
+
+
+            if (nums == null || nums.Length == 0)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < nums.Length; i++)
+                {
+                    for (int j = 0; j < nums.Length; j++)
+                    {
+                        if (j != i && nums[j] + nums[i] == targetNumber)
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+            return false;
         }
     }
 }
