@@ -7,7 +7,25 @@ namespace ChallengesWithTestsMarkVII
     {
         public bool CollectionContainsWord(IEnumerable<string> words, string word, bool ignoreCase)
         {
-            throw new NotImplementedException();
+
+            if (words == null)
+            {
+                return false;
+            }
+
+            foreach (string wrd in words)
+            {
+                if (ignoreCase && wrd != null && wrd.ToLower() == word.ToLower())
+                {
+                    return true;
+                }
+                else if (!ignoreCase && wrd != null && wrd == word)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public bool IsPrimeNumber(int num)
