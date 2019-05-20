@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMarkVII
 {
@@ -48,7 +49,14 @@ namespace ChallengesWithTestsMarkVII
 
         public int IndexOfLastUniqueLetter(string str)
         {
-            throw new NotImplementedException();
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                if (str.Count(x => x == str[i]) == 1)
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         public int MaxConsecutiveCount(int[] numbers)
