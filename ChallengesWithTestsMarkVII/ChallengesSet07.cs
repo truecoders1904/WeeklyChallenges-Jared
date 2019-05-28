@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMarkVII
 {
@@ -29,7 +30,18 @@ namespace ChallengesWithTestsMarkVII
 
         public bool EachArrayInJaggedArrayContainsTargetNumber(int[][] numbers, int targetNumber)
         {
-            throw new NotImplementedException();
+            if (numbers == null || numbers.Length == 0)
+                return false;
+
+            bool containsTargetNumber = true;
+            
+            foreach (int[] nums in numbers)
+            {
+                if (!nums.Contains(targetNumber))
+                    containsTargetNumber = false;
+            }
+
+            return containsTargetNumber;
         }
     }
 }
