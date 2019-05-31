@@ -16,18 +16,32 @@ namespace ChallengesWithTestsMarkVII
             int count = 0;
             foreach (Business business in businesses)
             {
-                if (business.TotalRevenue - business.TotalExpenses < 0)
+                if (business.TotalRevenue < business.TotalExpenses)
                 {
                     count += 1;
                 }
             }
-
             return count;
         }
 
         public string GetCommaSeparatedListOfProfitableBusinesses(List<Business> businesses)
         {
-            throw new NotImplementedException();
+            if (businesses == null)
+            {
+                return "";
+            }
+
+            string namesOfProfitableBusinesses = "";
+
+            foreach (Business business in businesses)
+            {
+                if (business.TotalRevenue > business.TotalExpenses)
+                {
+                    namesOfProfitableBusinesses += $"{business.Name},";
+                }
+            }
+
+            return namesOfProfitableBusinesses.TrimEnd(',');
         }
 
         public string GetNameOfHighestParentCompany(Business business)
